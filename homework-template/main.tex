@@ -1,0 +1,18 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{mypackage}
+
+\graphicspath{{img/}}
+
+\pgfplotsset{compat=1.18}
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+\author{Author Name}
+\title{Title}
+\begin{document}
+
+	\maketitle
+
+	\foreach \n in {1,...,2}{\import{./questions}{\n.tex}}	
+	
+\end{document}s
