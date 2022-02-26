@@ -1,0 +1,124 @@
+\documentclass[
+  % -- opções da classe memoir --
+  12pt,				         % tamanho da fonte
+  oneside,			       % para impressão apenas no recto. Oposto a twoside
+  a4paper,			       % tamanho do papel. 
+  article,
+  % -- opções da classe abntex2 --
+  %chapter=TITLE,		   % títulos de capítulos convertidos em letras maiúsculas
+  %section=TITLE,		   % títulos de seções convertidos em letras maiúsculas
+  %subsection=TITLE,	 % títulos de subseções convertidos em letras maiúsculas
+  %subsubsection=TITLE % títulos de subsubseções convertidos em letras maiúsculas
+  % -- opções do pacote babel --
+  english,		       	 % idioma adicional para hifenização
+  brazil,			      	 % o último idioma é o principal do documento
+]{abntex2}
+
+\usepackage{mypackage}
+
+\titulo{Article title}
+\autor{Author name \and Author name \and Author name \and Author name}
+\local{Local Name}
+\data{YEAR}
+\instituicao{%
+  Institution
+  }
+%\tipotrabalho{NOT NECESSARY}
+% ---
+% 
+% ---
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Insert title here},
+	    pdfcreator={authors},
+		pdfkeywords={keyword}{keyword1}{keyword2}{keyword3}{keyword4}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+\makeindex
+
+% ---
+% Iniciando efetivamente o documento
+% ---
+\begin{document} 
+
+    % Fazer com que as secções sejão subcapitulos
+    \renewcommand{\thesection}{\noindent\arabic{chapter}.\arabic{section}}
+    % ---
+
+    % Selecionando linguagem
+    % ---
+
+    \selectlanguage{brazil}
+    % ---
+    % Retira espaço extra obsoleto entre as frases.
+    % ---
+
+    \frenchspacing
+    % ---
+    % Imprimir a capa 
+    % ---
+    
+    \imprimircapa
+    % ---
+    % Imprimir a tabela de conteúdos(Sumário)
+    % ---
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents*
+    \cleardoublepage
+    % ---
+    % PARTE TEXTUAL
+    % ---
+    \textual
+    % ---
+    % Criar nova página e então iniciar a escrita
+    % ---
+    \newpage
+    
+    %--------------Introduction----------------%
+
+    \import{./sections/introduction}{introduction.tex}
+
+    %--------------Development-----------------%
+
+    \import{./sections/development}{1.tex}
+    
+    \import{./sections/development}{2.tex}
+
+    \import{./sections/development}{3.tex}
+
+    \import{./sections/development}{4.tex}
+
+    \import{./sections/development}{5.tex}
+
+    %--------------Conclusion------------------%
+
+    \import{./sections/conclusion}{conclusion.tex}
+
+    \postextual
+
+    %--------------References------------------%
+
+    \bibliography{references}
+
+    %--------------Appendex--------------------%
+
+    \import{./sections/appendix}{appendix.tex}
+
+    \phantompart
+
+    \printindex
+
+\end{document}
+
+

@@ -1,0 +1,104 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mypackage}[2014/08/24 Example LaTeX package]
+
+% ---
+% Pacotes fundamentais 
+% ---
+\RequirePackage{lmodern}		        	% Usa a fonte Latin Modern
+\RequirePackage[T1]{fontenc}      		% Selecao de codigos de fonte.
+\RequirePackage[utf8]{inputenc}   		% Codificacao do documento (conversão automática dos acentos)
+\RequirePackage{indentfirst}	      	% Indenta o primeiro parágrafo de cada seção.
+\RequirePackage{color}				        % Controle das cores
+\RequirePackage{graphicx}			        % Inclusão de gráficos
+\RequirePackage{microtype} 			      % para melhorias de justificação
+\RequirePackage{listings}
+\RequirePackage{amsmath}
+\RequirePackage{import}
+\RequirePackage{lipsum}				               % para geração de dummy text
+\RequirePackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\RequirePackage[alf]{abntex2cite}                  % Citações padrão ABNT
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+
+% ---
+% ---
+% Definindo formatação para exibição de código
+% ---
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{gray}{0.6}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{
+  style=mystyle,
+}
+% ---
+% 
+% ---
+\graphicspath{{../images/}}
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+% ---
+% 
+% ---
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+% ---
+% 
+% ---
+% Espaçamento simples
+\SingleSpacing
+% ---
+% Informações de dados para CAPA
+% ---

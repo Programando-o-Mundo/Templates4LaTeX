@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{mypackage}
+
+\graphicspath{{img/}}
+     
+\sloppy
+
+\title{Article title}
+
+\author{Author name\inst{1} \and Author Name\inst{2} \and \\
+ Author Name\inst{3} }
+
+\address{Institution name}
+
+\begin{document} 
+
+  \maketitle
+
+  %----------------------Abstract-------------------------%
+
+  \import{./sections}{abstract.tex}
+
+  %----------------------General Information---------------%
+
+  \import{./sections}{general-information.tex}
+
+  %----------------------Motivacao-------------------------%  
+
+  \import{./sections/motivation}{1.tex}
+
+  %----------------------Objetivos-------------------------% 
+
+  \import{./sections/objectives}{1.tex}
+
+  %----------------------Modelo----------------------------% 
+
+  \import{./sections/models}{1.tex}
+
+  %----------------------Resultados de simulação-----------% 
+
+  \import{./sections/simulation-results}{1.tex}
+
+  %----------------------Conclusões------------------------% 
+
+  \import{./sections/conclusion}{conclusoes.tex}
+
+  %----------------------Referências-----------------------% 
+
+  \bibliographystyle{sbc}
+  \bibliography{sbc-template}
+  
+\end{document}
