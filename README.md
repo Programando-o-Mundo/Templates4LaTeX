@@ -11,6 +11,9 @@ I decided to add my own templates, but feel free to add issues/pull requests abo
 
 ## Current templates
 
-* ABNT
-* SBC
+* Article
+  * ABNT
+  * SBC
+  * IEEE
 * Homework
+  * Template1
