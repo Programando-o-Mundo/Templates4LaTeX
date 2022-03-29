@@ -1,0 +1,23 @@
+\section{Conclusões}
+
+    %Nas conclusões, inicia-se com um breve resumo do que foi o trabalho desenvolvido,
+    %depois faz-se uma discussão acerca dos objetivos alcançados. Ou seja, os objetivos
+    %apresentados na Introdução casam com os resultados discutidos na seção de Resultados? 
+    %Quais resultados podem ser destacados? Por fim, há um parágrafo para apresentar possíveis trabalhos futuros.
+
+    Após a realização dos testes em todos os cenários propostos, e uma análise dos gráficos apresentados, houve um 
+    receio de que o ponto da pesquisa não havia sido alcançado, já que os resultados se mostraram pouco expressivos. 
+    Em nosso caso, tanto o LFU quanto o FIFO tiveram um desempenho com diferença menor que 5\% entre eles, em alguns 
+    casos nem havendo diferença alguma. Porém, após uma análise e estudo dos artigos correlacionados, foi possível observar que 
+    a política de substituição LRU se mostra de forma pouco significativa mais eficiente do que a política FIFO. 
+
+    Tudo que descobrimos esteve desde Smith e Goodman \cite{b1} que disseram que não há diferença de desempenho entre os algoritmos 
+    e que aleatoriedade é mais eficiente. Enquanto no artigo da Samira Mirbagher Ajorpaz, Elba Garza, Sangam Jindal, e Daniel A. Jiménez\cite{b3}, 
+    mostrou que o desempenho do LRU é pouco superior ao FIFO, algo que consegue ser detectado, mas seu uso diário não teria melhora perceptível e 
+    que seria mais importante considerar outros tantos algoritmos que possuem um desempenho significativamente superior aos dois anteriores. Por fim, 
+    o artigo de Aurore Junier, Damien Hardy, Isabelle Puaut \cite{b2}, mostrou algo inusitado, indo na direção oposta dos outros dois artigos, 
+    apresentou dados de que o LRU pode sim ter um desempenho superior à inserção aleatória de dados na cache.
+
+    Concluindo, nossos testes demonstraram que não há grande diferença desses algoritmos quando usados em caches pequenas, os dois primeiros artigos
+    concordam com nosso posicionamento, enquanto o outro artigo discordou. Dessa forma, é importante manter essa discussão aberta para novos experimentos.
+    Considerando que cenários de testes diferentes apresentam resultados completamente dispersos.

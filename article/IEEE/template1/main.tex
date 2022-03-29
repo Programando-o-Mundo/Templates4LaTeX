@@ -1,0 +1,68 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{mypackage}
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\pgfplotsset{compat=1.4}
+\usepgfplotslibrary{statistics}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+    \hypersetup{
+    pdfsubject={Article name},
+    pdfcreator={pdf_creator_here},
+    colorlinks=true,       		% false: boxed links; true: colored links
+    linkcolor=black,          	% color of internal links
+    citecolor=black,        		% color of links to bibliography
+    filecolor=black,      		% color of file links
+    urlcolor=black,
+    bookmarksdepth=4
+}
+
+
+\begin{document}
+
+  \title{Estudo de hierarquia de memória}
+
+  \author{\IEEEauthorblockN{1\textsuperscript{st} Author}
+  \IEEEauthorblockA{\textit{Institute1} \\
+  \textit{College Name}\\
+  City, Country \\
+  address@email.com}
+  \and
+  \IEEEauthorblockN{2\textsuperscript{nd} Author}
+  \IEEEauthorblockA{\textit{Institute 2} \\
+  \textit{College Name}\\
+  City, Country \\
+  address@email.com}
+  \and
+  \IEEEauthorblockN{3\textsuperscript{rd} Author}
+  \IEEEauthorblockA{\textit{Institute 3} \\
+  \textit{College Name}\\
+  City, Country \\
+  address@email.com}
+  \and
+  \IEEEauthorblockN{4\textsuperscript{th} Author}
+  \IEEEauthorblockA{\textit{Institute 4} \\
+  \textit{College Name}\\
+  City, Country \\
+  address@email.com}
+  }
+
+  \maketitle
+
+  \import{sections/}{abstract.tex}
+
+  \import{sections/}{introducao.tex}
+
+  \import{sections/}{trabalhos-correlatos.tex}
+
+  \import{sections/}{metodologia-proposta.tex}
+
+  \import{sections/}{avaliacao-resultados.tex}
+
+  \import{sections/}{conclusao.tex}
+
+  \import{sections/}{referencias.tex}
+
+\end{document}

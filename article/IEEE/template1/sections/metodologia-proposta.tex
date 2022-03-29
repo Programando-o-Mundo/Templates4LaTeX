@@ -1,0 +1,91 @@
+\section{Metodologia ou Proposta de Arquiteturas}
+
+    %A metodologia utilizada no artigo consiste no estudo de artigos que se correlacionam com o tema estudado, 
+    %como também a utilização e desenvolvimento de arquiteturas feitas no simulador Amnesia.
+    Para a elaboração de teste utilizamos o simulador-Amnésia para elaborar algumas
+    arquiteturas (tabelas \ref{tab1} e \ref{tab2}) que a partir desses cenários serem executados
+    executamos os testes (tabela \ref{tab3})
+    \begin{table}[H]
+    \caption{características gerais da arquitetura i}
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \textbf{Especificações} & \multicolumn{3}{|c|}{\textbf{Partes da Arquitetura}} \\
+            \cline{2-4} 
+            \textbf{da Arquitetura} & \textbf{\textit{Processador}}& \textbf{\textit{CPU}}& \textbf{\textit{Trace}} \\
+            \hline
+            Tamanho da palavra & --- & 4 & 4 \\
+            \hline
+            processorContains & 0 & --- & --- \\
+            \hline
+            Ciclos por escrita & 0 & --- & --- \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{table}
+
+    \begin{table}[H]
+    \caption{características gerais da arquitetura ii}
+    \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Especificações} & \multicolumn{2}{|c|}{\textbf{Partes da Arquitetura}} \\
+            \cline{2-3} 
+            \textbf{da Arquitetura} & \textbf{\textit{Memória Principal}}& \textbf{\textit{Cache}} \\
+            \hline
+            Tamanho da linha / bloco & 1 & 1  \\
+            \hline
+            Ciclos por leitura & 1 & 1  \\
+            \hline
+            Ciclos por escrita & 2 & 2  \\
+            \hline
+            Tempo do ciclo & 10 & 1  \\
+            \hline
+            Tamanho da memória & 16 & {$^{\mathrm{*}}$}2  \\
+            \hline
+            Associatividade & --- & 2  \\
+            \hline
+            Politica de escrita & --- & Write-Through  \\
+            \hline
+            Politica de substituição & --- & {$^{\mathrm{*}}$}FIFO  \\
+            \hline
+            \multicolumn{3}{l}{$^{\mathrm{*}}$ Os valores com o asterisco foram os valores modificados.}
+        \end{tabular}
+        \label{tab2}
+    \end{table}
+
+    \begin{table}[H]
+    \caption{Dados modificados}
+    \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Especificações} & \multicolumn{2}{|c|}{\textbf{Valores}} \\
+            \cline{2-3} 
+            \textbf{da Arquitetura} & \textbf{Tamanho da Memoria} & \textbf{Politica de Substituição} \\
+            \hline
+            Cenário 1 & 2 & FIFO \\
+            \hline
+            Cenário 2 & 2 & LRU \\
+            \hline
+            Cenário 3 & 4 & FIFO\\
+            \hline
+            Cenário 4 & 4 & LRU\\
+            \hline
+            Cenário 5 & 8 & FIFO\\
+            \hline
+            Cenário 6 & 8 & LRU\\
+            \hline
+            Cenário 7 & 16 & FIFO\\
+            \hline
+            Cenário 8 & 16 & LRU\\
+            \hline
+            %\multicolumn{3}{l} {Sample of a Table footnote.}
+        \end{tabular}
+        \label{tab3}
+    \end{table}
+
+    Ao modificar o valor do tamanho da memória e da política de substituição da cache,
+    é possível criar 8 cenários distintos para se avaliar o impacto do tamanho da cache
+    no desempenho dos métodos de substituição. Sendo assim, com os cenários propostos
+    foram realizados diversos testes com o intuito de analisar a localidade temporal e
+    localidade espacial nas arquiteturas.

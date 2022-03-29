@@ -1,0 +1,33 @@
+\section{Trabalhos Correlatos}
+
+    %Nesta seção, artigos relacionados à simulações de memória são apresentados.
+    %Por exemplo, para cada artigo, um parágrafo. Ao final, um parágrafo que menciona
+    %a diferença entre o artigo em questão e os artigos correlatos.
+
+    A partir de James E. Smith e James R. Goodman\cite{b1}, tanto os algoritmos de LRU, quanto o de FIFO para
+    uma cache, possuem o pior desempenho possível, quando comparados a qualquer outro algoritmo. 
+    O exemplo principal deles foi mostrar como mapeamento aleatório consegue ser várias vezes mais eficaz, 
+    uma vez que programas que precisam reescrever muitas vezes na cache e remover um valor que será reutilizado 
+    em um futuro muito próximo.
+
+    Considerando que \cite{b1} é um artigo escrito em 1985, muitas coisas mudaram e não pudemos usar mais esses resultados
+    como verdadeiros em situações do dia-a-dia. Tanto o LRU quanto o FIFO se mostram ineficientes quando
+    os programas se tornam maiores do que o tamanho de toda a cache do processador (resultado apresentado pelo mesmo artigo). 
+    Hoje, temos caches muito maiores do que naquela época, com isso, o principal foco da pesquisa do Smith e 
+    do Goodman acabou perdendo o seu valor nos dias de hoje, já que estava sendo considerando caches extremamente pequenas, na maior 
+    parte das vezes inferior ao tamanho de aplicações comuns do cotidiano.
+
+    Por outro lado, o artigo \cite{b2}, por ser de 2008 poderia ser mais promissor em apresentar 
+    dados que ajudariam em nossa pesquisa, porém não foi isso que aconteceu. A pesquisa da Universidade de 
+    Rennes faz também análise da memória Cache em relação as políticas de substituição. Entretanto, as políticas 
+    utilizadas(fora a LRU) são diferentes e não há a utilização da FIFO. Além de que, o objetivo da pesquisa é de usar 
+    dados teóricos para melhorar um método de análise de instrução estática de cache usando Pseudo LRU e a política 
+    aleatória de troca. E mesmo assim, o próprio artigo provou que métodos não LRU demonstraram uma significante perca de precisão.
+
+    Em contrapartida, o artigo de Samira Mirbagher Ajorpaz \cite{b3} faz uma comparação qualitativa entre algumas políticas de substituição
+    com a GHRP, a qual o artigo pretende discorrer sobre, e mostrar a sua eficiência quanto às demais política entre ela e a LRU. A partir
+    desse cenário, o LRU se mostrou uma política bem intermediária, e em alguns casos seus resultados sendo próximos a valores de uma 
+    política de valores aleatórios. Podemos até analisar que: pela quantidade de 1.000 instruções e o tamanho da cache este é um resultado 
+    esperado, pois a LRU é um tipo de política que não é eficiente em gerenciar valores que vão ser mantidos na memória em caches muito 
+    pequenas. O que podemos notar no nosso trabalho é que os resultados não diferenciam muitos da FIFO, o que era inesperado, pois acreditava-se 
+    que o resultado fosse ser muito pior em relação ao LRU Image[\ref{ima1}] [\ref{ima2}] [\ref{ima3}] [\ref{ima4}]
