@@ -3,7 +3,7 @@
 ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Um repositório para guardar templates de Latex
+Um repositório para guardar templates de LaTeX
 
 Aqui nós temos varios templates de diferentes tipos de trabalhos, fiquem a vontade para utilizarem
 em seus projetos. (Não se esquecendo que eles possuem suas licenças)
