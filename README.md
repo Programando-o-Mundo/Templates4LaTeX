@@ -3,14 +3,14 @@
 ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A repository for storing templates for LaTeX projects
+Um repositório para guardar templates de Latex
 
-Stored in this repository are pre-made LaTeX templates for creating all sorts of projects, from article, thesis, homework, slides
-and more.
+Aqui nós temos varios templates de diferentes tipos de trabalhos, fiquem a vontade para utilizarem
+em seus projetos. (Não se esquecendo que eles possuem suas licenças)
 
-I decided to add my own templates, but feel free to add issues/pull requests about other templates.
+Além disso, se tiverem sugestões de templates a serem adicionados, fiquem a vontade para abrir issues.
 
-## Current templates
+## Templates atuais
 
 * Article
   * ABNT
